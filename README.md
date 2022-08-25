@@ -19,7 +19,7 @@ Requires parameters: `query`, `canvasSiteId`, and `session_id`
 
 ## Important Lambda Configurations
 
-# environment variables
+### environment variables
 
 | variable | value |
 | ---------| -------- | 
@@ -29,7 +29,7 @@ Requires parameters: `query`, `canvasSiteId`, and `session_id`
 
 /var/task/ is where the libraries will be installed by Docker
 
-# execution role
+### execution role
 
 lambda-vpc-role
 
@@ -40,17 +40,17 @@ Enough ephermeral storage to hold indexes in /tmp/ folder
 
 Current values are 3000MB and 2000MB for memory and ephemeral storage, respectively
 
-# vpc
+### vpc
 
 vpc-1d03de76 (172.31.0.0/16) | Default
 
-# subnets
+### subnets
 
 subnet-0f70b3960592997d3 (172.31.64.0/20) | us-east-2b, umdb_eb_priv_2b
 subnet-028771bf0641fb2f9 (172.31.128.0/20) | us-east-2a, umdb_eb_priv_2a
 subnet-0ca93b854c2cc6551 (172.31.96.0/20) | us-east-2c, umdb_eb_priv_2c
 
-# security group 
+### security group 
 sg-1308436b (default) | MySQL
 
 ## Structure
@@ -102,7 +102,7 @@ Wrapper for lambda handler, calls pyterrier_search to get results. Requires `que
 
 Contains code for executing pyterrier search, querying database and s3 buckets.
 
-#### packages 
+### packages 
 
 Folder containng all the dependencies required for `search.py` and `pyterrier_search.py`.
 
