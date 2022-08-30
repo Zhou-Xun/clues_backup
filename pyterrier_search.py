@@ -63,7 +63,7 @@ def download_index(s3_bucket, local_path, folder_name, conn):
 def retrieve_indexes(class_id):
     print("retrieve start")
     # Temporary local folder for index loaded from S3
-    pt_index_path = '/tmp/Index'
+    pt_index_path = '/tmp/Index/' + str(class_id)
 
     # Increases the amount of active threads in boto to 50
     client_config = botocore.config.Config(
